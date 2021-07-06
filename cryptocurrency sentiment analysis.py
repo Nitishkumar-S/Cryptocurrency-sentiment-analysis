@@ -35,8 +35,9 @@ def getSentiment(score):
 
 if __name__=="__main__":
     
-    login=pd.read_csv("login.csv")
-
+    login=pd.read_csv("login.csv")     #The api credentials were saved in a file named 'login.csv' which had four keys, api key, api consumer secret, access token key, acccess token secret
+                                       #format of login.csv file: column names are key names and entries are the key values
+    
     #Get twitter API credentials from login file
     consumerKey=''.join(login['apikey'])
     consumerSecret=''.join(login['apisecretkey'])
